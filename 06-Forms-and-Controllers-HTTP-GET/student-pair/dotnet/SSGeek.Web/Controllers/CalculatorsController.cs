@@ -16,8 +16,17 @@ namespace SSGeek.Web.Controllers
         // - create a new action to process the form submission (e.g. AlienAgeResult, AlienWeightResult, etc.)
         // - create a view that displays the submitted form result
 
-        
+
         // GET: Calculators/AlienWeight
+
+        //private AlienWeightModel alienWeightModel;
+
+        //public CalculatorsController(AlienWeightModel alienModel)
+        //{
+        //    this.alienWeightModel = alienModel;
+        //}
+
+
         public ActionResult AlienWeight()
         {
             return View();
@@ -29,7 +38,27 @@ namespace SSGeek.Web.Controllers
             return View(model);
         }
 
+        public ActionResult AlienAge()
+        {
+            return View();
+        }
+
         
+        public ActionResult AlienAgeResult(AlienAgeModel model)
+        {
+            return View(model);
+        }
+
+        public ActionResult AlienTravel()
+        {
+            return View();
+        }
+
+        
+        public ActionResult AlienTravelResult(AlienTravelModel model)
+        {
+            return View(model);
+        }
 
         private List<SelectListItem> planets = new List<SelectListItem>()
         {

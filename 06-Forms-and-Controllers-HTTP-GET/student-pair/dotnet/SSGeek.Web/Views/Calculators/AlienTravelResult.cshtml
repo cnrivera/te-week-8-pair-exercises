@@ -1,0 +1,13 @@
+﻿@model AlienTravelModel
+@{
+    ViewData["Title"] = "Alien Travel Result";
+    double travelTime = Model.GetTravelTime();
+}
+
+    <section id="calculatorResult" class="centeredPanel">
+
+
+        <img src="~/images/@(Model.Planet).jpg" />
+        <p>Traveling by @Model.TransportMode you will reach @Model.Planet in @travelTime years. You will be @Model.ArrivalAge(travelTime) years old.</p>
+
+    </section>

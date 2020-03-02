@@ -1,39 +1,40 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
-using System.Web;
+using System.Threading.Tasks;
 
 namespace SSGeek.Web.Models
 {
-    public class AlienWeightModel
+    public class AlienAgeModel
     {
+
         [Display(Name = "Choose a planet: ")]
         public string Planet { get; set; }
 
-        [Display(Name = "Enter your Earth weight: ")]
-        public double NumberToConvert { get; set; }
+        [Display(Name = "Enter your Earth age: ")]
+        public double EarthAge { get; set; }
 
         public double GetConvertedValue()
         {
-            Dictionary<string, double> convertWeights = new Dictionary<string, double>()
+            Dictionary<string, double> convertAge = new Dictionary<string, double>()
             {
-                { "Mercury", 0.37},
-                { "Venus", 0.90},
-                { "Mars", 0.38 },
-                { "Jupiter", 2.65 },
-                { "Saturn", 1.13 },
-                { "Uranus", 1.09 },
-                { "Neptune", 1.43 },
+                { "Mercury", 87.96 },
+                { "Venus", 224.68 },
+                { "Mars", 686.98 },
+                { "Jupiter", 11.862 },
+                { "Saturn", 29.456 },
+                { "Uranus", 84.07 },
+                { "Neptune", 164.81 },
                
             };
 
-            double convertedValue = NumberToConvert * convertWeights[Planet];
+            double convertedValue = Math.Round(EarthAge / convertAge[Planet], 2);
 
             return convertedValue;
-         
-            
+
+
         }
 
         public static List<SelectListItem> planets = new List<SelectListItem>()
