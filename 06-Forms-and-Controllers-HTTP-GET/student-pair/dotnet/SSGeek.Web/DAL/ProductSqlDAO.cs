@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace SSGeek.Web.DAL
 {
     public class ProductSqlDAO : IProductDAO
-    {             
+    {
+        private string connectionString;
 
         public Product GetProduct(int id)
         {

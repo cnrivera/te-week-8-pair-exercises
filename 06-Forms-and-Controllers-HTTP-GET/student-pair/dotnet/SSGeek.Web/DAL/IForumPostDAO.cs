@@ -9,6 +9,6 @@ namespace SSGeek.Web.DAL
     public interface IForumPostDAO
     {
         IList<ForumPost> GetAllPosts();
-        bool SaveNewPost(ForumPost post);
+        void SaveNewPost(ForumPost post);
     }
 }
