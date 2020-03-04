@@ -164,7 +164,7 @@ input[type=text], input[type=datetime], textarea {
 }
 
 th, td {
-    color: white;
+    color: black;
 }
 
 table tr:first-child {
@@ -199,4 +199,8 @@ section.centeredPanel {
     section.centeredPanel p {
         color: #000;
         text-align: left;
+    }
+
+    tr.store {
+        display: inline;
     }

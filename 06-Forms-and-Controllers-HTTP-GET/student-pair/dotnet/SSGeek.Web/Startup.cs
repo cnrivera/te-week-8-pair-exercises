@@ -35,6 +35,7 @@ namespace SSGeek.Web
 
             string connectionString = Configuration.GetConnectionString("Default");
             services.AddScoped<IForumPostDAO, ForumPostSqlDAO>(d => new ForumPostSqlDAO(connectionString));
+            services.AddScoped<IProductDAO, ProductSqlDAO>(d => new ProductSqlDAO(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
