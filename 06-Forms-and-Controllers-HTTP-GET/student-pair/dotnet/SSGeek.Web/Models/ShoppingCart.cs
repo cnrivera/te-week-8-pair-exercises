@@ -23,7 +23,19 @@ namespace SSGeek.Web.Models
             shoppingCartItem.Quantity += quantity;
         }
 
+        public decimal GrandTotal
+        {
+            get
+            {
+                decimal total = 0.0M;
 
+                foreach (var item in Items)
+                {
+                    total += (item.Product.Price) * item.Quantity;
+                }
+                return total;
+            }
+        }
 
     }
 }

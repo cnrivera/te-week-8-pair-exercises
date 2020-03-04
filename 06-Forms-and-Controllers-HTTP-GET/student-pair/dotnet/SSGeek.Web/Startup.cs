@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SSGeek.Web.DAL;
+using Microsoft.Extensions.Options;
 
 namespace SSGeek.Web
 {
@@ -29,6 +30,13 @@ namespace SSGeek.Web
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 //options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(20);
+                options.CookieHttpOnly = true;
             });
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -52,6 +60,7 @@ namespace SSGeek.Web
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
             
             app.UseMvc(routes =>
             {

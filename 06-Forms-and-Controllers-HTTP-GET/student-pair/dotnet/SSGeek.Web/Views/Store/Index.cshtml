@@ -7,17 +7,16 @@
 
     <section class="centeredPanel ">
         <h2><strong>Solar System Geek Gift Shop</strong></h2>
-        <table>
+        <table class="store">
             <tbody>
                 @foreach (Product product in Model)
                 {
-                    <tr class="store">
-                      
-                            <div><a asp-controller="store" asp-action="detail" asp-route-id="@product.Id"><img src="~/images/@product.ImageName"></a></div>
-                            <div>
-                                <p>@product.Name</p>
+                    <tr>
+                            <td><a asp-controller="store" asp-action="detail" asp-route-id="@product.Id"><img width="200px" src="~/images/@product.ImageName"></a></td>
+                            <td>
+                                <p><strong>@product.Name</strong></p>
                                 <p>@product.Price.ToString("C")</p>
-                            </div>
+                            </td>
                        
                     </tr>
 

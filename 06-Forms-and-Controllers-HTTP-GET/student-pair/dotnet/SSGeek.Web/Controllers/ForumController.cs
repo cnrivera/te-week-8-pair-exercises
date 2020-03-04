@@ -37,6 +37,7 @@ namespace SSGeek.Web.Controllers
         public IActionResult NewPost(ForumPost newPost)
         {
             dao.SaveNewPost(newPost);
+            TempData["msg"] = "Your message has been saved!";
             return RedirectToAction("Index", "Forum");
         }
 

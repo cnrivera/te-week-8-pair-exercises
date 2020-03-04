@@ -177,8 +177,6 @@ table td {
     padding: 5px 5px;
 }
 
-
-
 section.centeredPanel {
     clear: both;
     display: block;
@@ -190,17 +188,32 @@ section.centeredPanel {
     margin: 20px auto;
 }
 
-    section.centeredPanel h2 {
+section.centeredPanel h2 {
         color: #000000;
         text-align: center;
         padding-top: 15px;
     }
 
-    section.centeredPanel p {
+section.centeredPanel p {
         color: #000;
         text-align: left;
     }
 
-    tr.store {
+store {
         display: inline;
     }
+
+#temp {
+    background-color: lime;
+    text-align: center;
+    width: 75%;
+ 
+    margin: 0, auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
