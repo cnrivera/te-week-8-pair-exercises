@@ -10,13 +10,29 @@
         <tbody>
             <tr>
                 <td>
-                    <img src="~/images/@Model.ImageName">
+                    <img src="~/images/@Model.ImageName" width="300">
                 </td>
                 <td>
                     <h3>@Model.Name</h3>
                     <h4>@Model.Price.ToString("C")</h4>
                     <p>@Model.Description</p>
                 </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <form asp-action="AddToCart" asp-controller="Store" method="post">
+                        <input type="hidden" asp-for="@Model.Id" />
+                        <p>Quantity to buy:</p>
+                        <label name="quantity"></label>
+                        <input type="number" min="1" required name="quantity" />
+
+                        <button id="change-color">Add to Cart</button>
+
+                    </form>
+
+                </td>
+
             </tr>
 
 
@@ -25,16 +41,7 @@
 
     </table>
 
-    <form asp-action="AddToCart" asp-controller="Store" method="post">
-        <input type="hidden" asp-for="@Model.Id" />
-        <p>Quantity to buy:</p>
-        <label name="quantity"></label>
-        <input type ="number" min="1" required name="quantity" />
 
-        <button>Add to Cart</button>
-
-    </form>
-    
 
 
 

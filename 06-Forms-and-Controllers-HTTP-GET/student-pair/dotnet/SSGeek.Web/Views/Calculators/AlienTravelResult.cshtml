@@ -5,9 +5,20 @@
 }
 
     <section id="calculatorResult" class="centeredPanel">
+        <table>
+            <tbody>
+                <tr>
+                    <td><img src="~/images/@(Model.Planet).jpg" width="200"/></td>
+                    <td><p>Traveling by @Model.TransportMode you will reach @Model.Planet in @travelTime years. You will be @Model.ArrivalAge(travelTime) years old.</p></td>
+
+                </tr>
+
+            </tbody>
 
 
-        <img src="~/images/@(Model.Planet).jpg" />
-        <p>Traveling by @Model.TransportMode you will reach @Model.Planet in @travelTime years. You will be @Model.ArrivalAge(travelTime) years old.</p>
+        </table>
+
+        
+        
 
     </section>

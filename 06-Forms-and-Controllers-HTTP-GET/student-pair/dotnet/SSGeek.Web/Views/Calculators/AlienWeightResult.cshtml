@@ -7,8 +7,15 @@
 
 <section id="calculatorResult" class="centeredPanel">
 
+   <table>
+       <tbody>
+           <tr>
+               <td><img src="~/images/@(Model.Planet).jpg" width="200" /> </td>
+               <td><p>If you are @Model.NumberToConvert on planet Earth, you would weigh @Model.GetConvertedValue() lbs. on  @Model.Planet.</p></td>
+           </tr>
+       </tbody>
+   </table>
+    
    
-    <img src="~/images/@(Model.Planet).jpg" /> 
-    <p>If you are @Model.NumberToConvert on planet Earth, you would weigh @Model.GetConvertedValue() lbs. on  @Model.Planet.</p>
 
 </section>

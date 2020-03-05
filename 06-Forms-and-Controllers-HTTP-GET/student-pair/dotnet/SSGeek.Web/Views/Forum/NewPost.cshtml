@@ -11,17 +11,20 @@
 
         <div>
             <label asp-for="Username"></label>
-            <input type="text" asp-for="Username" />
+            <input type="text" asp-for="Username" placeholder="Enter your username"/>
+            <span asp-validation-for="Username"></span>
         </div>
 
         <div>
             <label asp-for="Subject"></label>
-            <input type="text" asp-for="Subject" />
+            <input type="text" asp-for="Subject" placeholder="Enter a subject" />
+            <span asp-validation-for="Subject"></span>
         </div>
 
         <div>
             <label asp-for="Message"></label>
-            <input type="text" asp-for="Message" />
+            <input type="text" asp-for="Message" placeholder="Enter your message" />
+            <span asp-validation-for="Message"></span>
         </div>
 
 

@@ -5,8 +5,22 @@
 
     <section id="calculatorResult" class="centeredPanel">
 
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="~/images/@(Model.Planet).jpg" width="200" />
+                    </td>
+                    <td>
+                        <p>If you are @Model.EarthAge years old on Earth, then you are @Model.GetConvertedValue() @Model.Planet years old.</p>
+                    </td>
+                </tr>
 
-        <img src="~/images/@(Model.Planet).jpg" />
-        <p>If you are @Model.EarthAge years old on Earth, then you are @Model.GetConvertedValue() @Model.Planet years old.</p>
+            </tbody>
+
+
+        </table>
+        
+       
 
     </section>

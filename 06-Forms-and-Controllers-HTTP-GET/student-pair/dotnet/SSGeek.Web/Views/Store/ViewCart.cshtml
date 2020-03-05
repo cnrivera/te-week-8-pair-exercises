@@ -23,7 +23,7 @@
     @foreach (ShoppingCartItem item in Model.Items)
     {
         <tr>
-            <td><img src="~/images/@item.Product.ImageName" /></td>
+            <td><img src="~/images/@item.Product.ImageName" width="200" /></td>
             <td>@item.Product.Name</td>
             <td>@item.Product.Price.ToString("C")</td>
             <td>@item.Quantity</td>

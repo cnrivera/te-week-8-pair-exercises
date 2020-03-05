@@ -28,6 +28,7 @@ namespace SSGeek.Web.Controllers
         [HttpGet]
         public IActionResult NewPost()
         {
+            
             return View();
         }
 
@@ -36,6 +37,11 @@ namespace SSGeek.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult NewPost(ForumPost newPost)
         {
+            if(!ModelState.IsValid)
+            {
+                return View(newPost);
+            }
+
             dao.SaveNewPost(newPost);
             TempData["msg"] = "Your message has been saved!";
             return RedirectToAction("Index", "Forum");
